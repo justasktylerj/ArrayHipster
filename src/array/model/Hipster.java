@@ -6,6 +6,16 @@ public class Hipster
 	private String [] hipsterPhrases;
 	private Book [] hipsterBooks;
 	
+	public Book[] getHipsterBooks() 
+	{
+		return hipsterBooks;
+	}
+
+	public void setHipsterBooks(Book[] hipsterBooks)
+	{
+		this.hipsterBooks = hipsterBooks;
+	}
+
 	public Hipster()
 	{
 		this.name ="";
