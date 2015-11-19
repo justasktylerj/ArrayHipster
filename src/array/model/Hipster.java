@@ -4,15 +4,15 @@ public class Hipster
 {
 	private String name;
 	private String [] hipsterPhrases;
-//	private book [] hipster books;
+	private Book [] hipsterBooks;
 	
 	public Hipster()
 	{
 		this.name ="";
 		this.hipsterPhrases = new String[4];
-//		this.hipsterBooks = new Book[3];
+		this.hipsterBooks = new Book[3];
 		setupArray();
-//		setupBooks();
+		setupBooks();
 	}
 	
 	private void setupArray()
@@ -22,6 +22,32 @@ public class Hipster
 		hipsterPhrases[2] = "insert sarcastic phrase here";
 		hipsterPhrases[3] = "i was into XXXXX before it was cool";
 	}
+	
+	private void setupBooks()
+	{
+		Book firstBook, secondBook, thirdBook;
+		firstBook = new Book();
+		firstBook.setAuthor("Bill watterson");
+		firstBook.setTitle("Calvin and Hobbes");
+		firstBook.setSubject("Cartoons");
+		firstBook.setPageCount(302);
+		firstBook.setPrice(24.99);
+		
+		secondBook = new Book();
+		secondBook.setAuthor("WOTC");
+		secondBook.setTitle("player's handbook");
+		secondBook.setSubject("Roleplaying");
+		secondBook.setPageCount(320);
+		secondBook.setPrice(49.95);
+		
+		thirdBook = new Book(1080,"Tyler Jarrard", "Leading a life of power, awesome, wizardry, and arcana", "Biography", 49.95 );
+		
+		hipsterBooks[0] = firstBook;
+		hipsterBooks[1] = secondBook;
+		hipsterBooks[2] = thirdBook;
+		
+	}
+	
 	
 	public String getName() 
 	{
